@@ -43,6 +43,12 @@ aside {
     text-align: center;
 }
 
+aside h2 {
+    position: absolute;
+    top: 650px;
+    left: 135px;
+}
+
 main img {
     width: 150px;
     height: auto;
@@ -64,14 +70,4 @@ footer {
     color: #ffa927;
 }
 
-aside {
-    width: 20em;
-    text-align: center;
-}
-
-aside h2 {
-    position: absolute;
-    top: 650px;
-    left: 135px;
-}
 
