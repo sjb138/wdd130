@@ -48,7 +48,7 @@ nav a {
   aside {
     width: 20rem;
     margin: 1rem;
-    border: 5px solid #ff48aa; /* 1️⃣ */
+    border: 2px solid #ff48aa; /* 1️⃣ */
     padding: 1rem;
     background-color: #ff48aa;
     color: #ffffff;
@@ -65,7 +65,12 @@ nav a {
   }
 
   footer {
+    p{
+        color: #ffffff;
+    }
     margin-top: 15px;
-    border-top: 10px solid #56d2ff;
+    border-top: 3px solid #56d2ff;
+    border-bottom: 3px solid #56d2ff;
     text-align: center;
+    background-color: #56d2ff;
   }
