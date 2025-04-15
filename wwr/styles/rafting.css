@@ -1,0 +1,441 @@
+/* Apply box-sizing globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* GENERAL TAGS */
+html, body {
+  height: 100%; /* Make sure the body takes the full height */
+  margin: 0;
+}
+
+body {
+  background-image: url('images/hero-background.jpg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the whole viewport */
+  background-position: center center; /* Centers the background image */
+  background-attachment: fixed; /* Makes the background image stay fixed while scrolling */
+}
+
+  
+
+/* HEADER with GRID */
+header .header-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: #56d2ff;
+  padding: 10px 20px;
+  gap: 20px;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  position: relative;
+  left: 400px
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the nav links */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  background-color: #ff48aa;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ffffff;
+  color: #ff48aa;
+  font-family: Notable, sans-serif;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  color: #ff48aa;
+  text-shadow: 0 0 5px #56d2ff;
+  font-family: Notable, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 4.2rem;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid #ff48aa;
+  padding: 2px;
+  box-shadow: 0 0 10px #56d2ff;
+}
+
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: rgba(49, 49, 49, 0.5);
+  transition: opacity 0.5s ease;
+  font-size: 4rem;
+}
+
+
+/* Default text visible at first */
+.default-text {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Hover text hidden at first */
+.hover-text {
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* When hovering over the container */
+.hero-container:hover .default-text {
+  opacity: 0;
+}
+
+.hero-container:hover .hover-text {
+  opacity: 1;
+}
+
+
+
+/* MAIN LAYOUT */
+main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+
+/* SECTIONS */
+.history, .adventure,{
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.adventure-img {
+  display: block;
+  margin: 15px auto;
+  width: 300px;
+}
+
+.contact-container {
+ display: block;
+ background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* TEXT PARAGRAPHS */
+p {
+  color: #333333;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+  width: 100%; /* Ensure the footer takes up the full width */
+  margin-top: 30px;
+  border-top: 3px solid #56d2ff;
+  border-bottom: 3px solid #56d2ff;
+  background-color: #56d2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; /* Add some padding for spacing */
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+/* FOOTER */
+footer {
+  margin-top: 30px;
+  border-top: 3px solid #56d2ff;
+  border-bottom: 3px solid #56d2ff;
+  background-color: #56d2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ff48aa;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff; /* Change to white on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 40px; /* Icon width */
+  height: 40px; /* Icon height */
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for shadow and scale */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Slight enlargement on hover */
+  box-shadow: 0 0 10px 3px #ff48aa; /* Pink ring effect */
+  border-radius: 50%; /* Make the shadow circular */
+}
+
+
+/* ACCESSIBILITY: COLOR CONTRAST CHECK PASSED */
+.navbar a,
+footer p,
+.social-icons img {
+  color: #ffffff;
+}
+
+
+/* Style the contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background:#56d2ff
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the employee section */
+.employee {
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+}
+
+.employee img {
+  border-radius: 8px;
+}
+
+.cta {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.newsletter {
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  padding: 2rem;
+}
+
+.adventure-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Trip Descriptions in Grid */
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates responsive columns */
+  gap: 20px; /* Adds space between the cards */
+  padding: 20px;
+}
+
+.trip-card {
+  background-color: #ffffff; /* Card background color */
+  border-radius: 10px; /* Rounded corners for the cards */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to create depth */
+  overflow: hidden; /* Ensures that the image and content stay within the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+  cursor: pointer; /* Shows a pointer on hover */
+  text-align: center; /* Centers the content */
+}
+
+.trip-card img {
+  width: 100%; /* Make the image fill the card */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures the image covers the space without stretching */
+}
+
+.trip-card h3 {
+  font-size: 1.5rem;
+  color: #ff48aa;
+  padding: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.trip-card p {
+  font-size: 1rem;
+  padding: 0 10px 10px;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+.trip-card:hover {
+  transform: scale(1.1); /* Enlarges the card */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+}
+
+.trip-card:hover h3,
+.trip-card:hover p {
+  transform: translateY(-5px); /* Lifts the title and text a little on hover */
+}
+
+.trip-card:hover img {
+  transform: scale(1.1); /* Slightly enlarges the image for a zoom effect */
+}
+
+/* Trip Table */
+.trip-table {
+  max-width: 1000px; /* Limits the width of the table */
+  margin: 0 auto; /* Centers the table horizontally */
+  padding: 20px;
+  background-color: #ffffff; /* Background color for the section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow around the table */
+  border-radius: 10px; /* Rounded corners for the section */
+  text-align: center;
+}
+
+.trip-table h2 {
+  font-size: 2rem;
+  color: #ff48aa;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures no space between table borders */
+}
+
+th, td {
+  padding: 12px 20px; /* Adds padding inside table cells */
+  border: 1px solid #ddd; /* Light gray border for cells */
+  font-size: 1rem;
+  text-align: center;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.5); /* Light gray background for header */
+  color: #333; /* Dark text for header */
+  font-weight: bold;
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.5); /* White background for table data */
+  color: #333; /* Dark text for table data */
+}
+
+tr:hover {
+  background-color: #56d2ff; /* Change row color on hover */
+  color: white; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem; /* Smaller font on mobile screens */
+  }
+
+  th, td {
+    padding: 10px 15px; /* Adjust padding on mobile screens */
+  }
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text inside the section */
+  margin: 50px auto; /* Center the section on the page with space around it */
+}

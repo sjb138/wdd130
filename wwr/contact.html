@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | White Water Rafting</title>
+  <meta name="author" content="Stephen Joseph Entrolezo Balboa">
+  <meta name="description" content="Get in touch with our team or inquire about our rafting adventures.">
+  <link rel="stylesheet" href="styles/rafting.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Notable&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('images/hero-background.jpg');
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-grid">
+      <img src="images/wwr-logo.jpeg" alt="Rafting Company Logo" class="logo">
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <section>
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 123 Whitewater Rafting Rd, El Nido, Palawan, Philippines</p>
+      <p><strong>Phone:</strong> hot2go-#007</p>
+      <p><strong>Email:</strong> info@pawikanadventures.com</p>
+
+      <h3>Find Us on the Map:</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section>
+      <h2>Meet Our Team</h2>
+      <div class="employee">
+        <img src="images/employee-1.jpg" alt="Employee 1" width="150">
+        <figcaption>Tony Stark - Rafting Guide</figcaption>
+      </div>
+      <div class="employee">
+        <img src="images/employee-2.jpg" alt="Employee 2" width="150">
+        <figcaption>Bruce Banner - Customer Support</figcaption>
+      </div>
+      <div class="employee">
+        <img src="images/employee-3.jpg" alt="Employee 3" width="150">
+        <figcaption>Steve Rogers - Operations Manager</figcaption>
+      </div>
+    </section>
+
+    <section>
+      <h2>We'd Love to Hear from You!</h2>
+      <form action="submit_form.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <fieldset>
+          <legend>Purpose of Inquiry:</legend>
+          <label for="general_inquiry">
+            <input type="radio" id="general_inquiry" name="inquiry_type" value="general_inquiry"> General Inquiry
+          </label>
+          <label for="reservation_question">
+            <input type="radio" id="reservation_question" name="inquiry_type" value="reservation_question"> Reservation Question
+          </label>
+          <label for="website_suggestion">
+            <input type="radio" id="website_suggestion" name="inquiry_type" value="website_suggestion"> Website Suggestion
+          </label>
+        </fieldset>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label for="subscribe">
+          <input type="checkbox" id="subscribe" name="subscribe"> Please subscribe me to the monthly newsletter.
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://app.moqups.com/MV41CZEx8zxxMzgLytnMH2NdYt5FySML/view/page/ad64222d5">Check out my Wireframe!</a>
+    </div>
+  </footer>
+</body>
+</html>
